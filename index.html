@@ -9,7 +9,7 @@
 <body>
   <header class="top-bar">
     <div class="logo">
-      <img src="../Logo-Unpas.png" alt="Logo Unpas"/>
+      <img src="logo.png" alt="Logo Unpas"/>
       <div class="logo-text">
         <h1>UNIVERSITAS PASUNDAN</h1>
         <p>Real choice for every generations</p>
@@ -23,8 +23,8 @@
   </header>
 
   <nav class="navbar">
-    <a href="#">Halaman Utama</a>
-    <a href="#">Bantuan</a>
+    <a href="https://www.unpas.ac.id/">Halaman Utama</a>
+    <a href="https://kemahasiswaan.unpas.ac.id/?p=9">Bantuan</a>
   </nav>
 
   <main class="main-container">
@@ -39,11 +39,11 @@
         <div class="warning-box">
           <strong>Perhatian!</strong>
           <ul>
-            <li>Data Pribadi belum diisi.</li>
-            <li>Alamat belum diisi.</li>
-            <li>Data Penghasilan belum diisi.</li>
-            <li>Data Keluarga belum diisi.</li>
-            <li>Data Pendidikan belum diisi.</li>
+            <li>Data Pribadi Sudah diisi <ion-icon class="check" name="checkmark-circle"></ion-icon></li>
+            <li>Alamat Sudah diisi <ion-icon class="check" name="checkmark-circle"></ion-icon></li>
+            <li>Data Penghasilan Sudah diisi <ion-icon class="check" name="checkmark-circle"></ion-icon></li>
+            <li>Data Keluarga Sudah diisi <ion-icon class="check" name="checkmark-circle"></ion-icon></li>
+            <li>Data Pendidikan Sudah diisi <ion-icon class="check" name="checkmark-circle"></ion-icon></li>
           </ul>
         </div>
       </div>
@@ -51,15 +51,53 @@
 
     <section class="content-area">
       <div class="tab-menu">
-        <a class="tab active">Pendaftaran Saya</a>
-        <a class="tab">Riwayat Pembayaran</a>
+        <a class="tab active">Riwayat Pembayaran</a>
       </div>
       <div class="content-box">
         <div class="content-inner">
-          <img src="https://cdn-icons-png.flaticon.com/512/7486/7486761.png" alt="clipboard" class="clipboard-icon"/>
-          <h2>Kamu belum Melengkapi Data Personal</h2>
-          <p>Silahkan lengkapi terlebih dahulu data kamu</p>
-          <button class="btn-dark">Lengkapi Data</button>
+       
+          <!-- Section Riwayat Pembayaran -->
+<section class="content-area">
+  <div class="tab-menu">
+    <a class="tab">Riwayat Pembayaran</a>
+    
+  </div>
+
+  <div class="content-box">
+    <h2>Riwayat Pembayaran</h2>
+    <table class="payment-history-table">
+      <thead>
+        <tr>
+          <th>No. Transaksi</th>
+          <th>Judul Pembayaran</th>
+          <th>Jumlah Pembayaran</th>
+          <th>Status Pembayaran</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>73251299008</td>
+          <td>Biaya Pendaftaran</td>
+          <td>Rp 300.000</td>
+          <td><span class="status-paid">Menunggu</span></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td><span >-</span></td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td><span>-</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
         </div>
       </div>
     </section>
@@ -340,5 +378,61 @@ body {
   }
 }
 
+.check {
+  color: green;
+}
+
+/* Tabel Riwayat Pembayaran */
+.payment-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.payment-history-table th,
+.payment-history-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.payment-history-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.payment-history-table td {
+  background-color: white;
+}
+
+.payment-history-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.status-paid {
+  color: green;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Responsif untuk Tabel */
+@media (max-width: 768px) {
+  .payment-history-table th,
+  .payment-history-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .payment-history-table {
+    font-size: 12px;
+  }
+}
+
 </style>
 
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
